@@ -29,4 +29,4 @@ const installedDeps = runCommand(installDepsCommand);
 if(!installedDeps) process.exit(-1);
 console.log(`Congratulations! You can start editing your Prix project. Use the following commands to start.`);
 
-console.log(`cd ${repoName} && npm start`)
+console.log(`cd ${repoName} && npm run dev`)
