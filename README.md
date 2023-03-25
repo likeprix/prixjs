@@ -4,7 +4,7 @@
 
 
 
-With Prixjs you can build powerful static websites with the fastest speed on the market and position yourself.
+With PrixJS you can build powerful static websites with the fastest speed on the market and position yourself.
 
 
 
@@ -14,7 +14,7 @@ _In the Google Lighthouse **PrixJS** performance tests it gave a **100/100** per
 
 ## Start a new project
 
-To start a project you can use 2 methods:<br />
+To start a PrixJS project you can use 2 methods:<br />
 
 
 
@@ -29,8 +29,6 @@ Manually (from scratch)
 npm install --save-dev prixjs
 ```
 
-
-
 ## Docs
 
 Soon we will launch the [Prix Docs](https://prix.dev)
@@ -40,7 +38,6 @@ Soon we will launch the [Prix Docs](https://prix.dev)
 ## Features
 
 __Prixjs Router__ `(prixjs/router)`<br />
-
 
 
 Available soon:

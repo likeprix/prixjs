@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 const { execSync } = require('child_process')
-
 const runCommand = command => {
     try {
      execSync(`${command}`, {stdio: 'inherit'})
@@ -9,16 +7,12 @@ const runCommand = command => {
         console.error(`Failed to execute ${command}`)
         return false;
     }
-
     return true;
-
 }
 
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/likeprix/create-prix ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm i`;
-
-
 console.log(`Starting the project with name ${repoName}`)
 
 const checkedOut = runCommand(gitCheckoutCommand)
