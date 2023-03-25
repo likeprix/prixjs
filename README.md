@@ -14,9 +14,7 @@ _In the Google Lighthouse **PrixJS** performance tests it gave a **100/100** per
 
 ## Start a new project
 
-To start a PrixJS project you can use 2 methods:<br />
-
-
+To start your new PrixJS project you can use 2 methods:<br />
 
 Recommended (with a template)
 
@@ -33,8 +31,6 @@ npm install --save-dev prixjs
 
 Soon we will launch the [Prix Docs](https://prix.dev)
 
-
-
 ## Features
 
 __Prixjs Router__ `(prixjs/router)`<br />
@@ -43,3 +39,6 @@ __Prixjs Router__ `(prixjs/router)`<br />
 Available soon:
 
 - __Prix SEO__ `(prixjs/seo)`
+
+## CHANGELOGS
+- [Prix package changelog](https://github.com/likeprix/prixjs/blob/master/packages/prixjs/CHANGELOG.md)
