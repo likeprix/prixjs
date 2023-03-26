@@ -29,4 +29,7 @@ if(!updatePrix) process.exit(-1);
 
 console.log(`Congratulations! You can start editing your Prix project. Use the following commands to start.`);
 
+if(repoName === './') {
+    return console.log('npm run dev');
+}
 console.log(`cd ${repoName} && npm run dev`)
