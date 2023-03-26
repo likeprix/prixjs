@@ -13,14 +13,20 @@ const runCommand = command => {
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/likeprix/create-prix ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm i`;
-console.log(`Starting the project with name ${repoName}`)
+const updatePrixCommand = `npm update prixjs`;
 
+console.log(`Starting the project with name ${repoName}`)
 const checkedOut = runCommand(gitCheckoutCommand)
 if(!checkedOut) process.exit(-1);
-console.log(`Installing dependencies for ${repoName}`)
 
+console.log(`Installing dependencies for ${repoName}`)
 const installedDeps = runCommand(installDepsCommand);
 if(!installedDeps) process.exit(-1);
+
+console.log(`Updating Prix dependency in ${repoName}`)
+const updatePrix = runCommand(updatePrixCommand);
+if(!updatePrix) process.exit(-1);
+
 console.log(`Congratulations! You can start editing your Prix project. Use the following commands to start.`);
 
 console.log(`cd ${repoName} && npm run dev`)
