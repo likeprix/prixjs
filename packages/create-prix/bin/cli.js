@@ -13,7 +13,7 @@ const runCommand = command => {
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/likeprix/create-prix ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm i`;
-const updatePrixCommand = `npm update prixjs`;
+const updatePrixCommand = `npm i prixjs@latest`;
 
 console.log(`Starting the project with name ${repoName}`)
 const checkedOut = runCommand(gitCheckoutCommand)
