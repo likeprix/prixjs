@@ -1,16 +1,24 @@
-"use strict";
-
-export function render(routes, element) {
-  const currentPath = window.location.pathname;
-  const component = routes[currentPath] || routes['404'];
-  if(component === routes['404']) console.log('Page not found');
-
-  const html = component()
-  const app = element;
-  app.innerHTML = html;
+export async function config(configObj = {}) {
+    const prixRoot = (configObj.root || document.getElementById('app'))
+    const pathName = window.location.pathname;
+    const fileName = pathName === '/' ? 'index' : pathName.substring(pathName.lastIndexOf('/') + 1);
+    
+    try {
+        const pageModule = await import(file /* in test*/);
+        prixRoot.innerHTML = pageModule.default();
+    } catch (error) {
+        console.log(error);
+        const errorPage = await import(/* @vite-ignore */ `./error.js`);
+        let rootError = 'Prix error: An error occurred while loading the Prix components, see the console for more information.';
+        const err = document.getElementById('app')
+        if(configObj.root == undefined || configObj.folder == undefined) {
+            return err.innerHTML = errorPage.default(rootError);
+        }
+        err.innerHTML = errorPage.default(error);
+    }
 }
 
-  export function Store(initialValue, backingValue) {
+export function Store(initialValue, backingValue) {
     let val = initialValue || backingValue;
 
     let updater = () => {};
