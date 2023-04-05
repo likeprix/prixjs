@@ -4,7 +4,7 @@ export async function config(configObj: { root?: HTMLElement, folder?: string } 
   const fileName = pathName === '/' ? 'index' : pathName.substring(pathName.lastIndexOf('/') + 1);
 
   try {
-    const pageModule = await import('./error1.js');
+    const pageModule = await import(`../../src/${configObj.folder}/${fileName}.js`);
     prixRoot.innerHTML = pageModule.default();
   } catch (error) {
     console.log(error);
